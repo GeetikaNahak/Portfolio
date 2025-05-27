@@ -19,10 +19,7 @@ export default function Home() {
         ]}
       />
       <Hero />
-      <Hero />
-      <Hero />
-      <Hero />
-      
+      <ProjectsSection/>
     </main>
   );
 }

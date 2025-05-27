@@ -1,22 +1,27 @@
+"use client";
+
 import React from 'react';
 import { motion } from 'framer-motion';
-import ProjectCard, { ProjectCardProps } from './ui/ProjectCard';
+import ProjectCardAnimated from './ui/project-card-animated';
 
-const projects: ProjectCardProps[] = [
+const projects = [
   {
     title: 'Project A',
-    description: 'A feature-rich web app for real-time collaboration and task management.',
-    link: 'https://github.com/user/project-a'
+    image: 'https://via.placeholder.com/300x300',
+    githubLink: 'https://github.com/user/project-a',
+    liveLink: 'https://yourdomain.com/project-a'
   },
   {
     title: 'Project B',
-    description: 'A full-stack application for food delivery with live tracking.',
-    link: 'https://github.com/user/project-b'
+    image: 'https://via.placeholder.com/300x300',
+    githubLink: 'https://github.com/user/project-b',
+    liveLink: 'https://yourdomain.com/project-b'
   },
   {
     title: 'Project C',
-    description: 'AI-powered chatbot built with React and GPT integration.',
-    link: 'https://github.com/user/project-c'
+    image: 'https://via.placeholder.com/300x300',
+    githubLink: 'https://github.com/user/project-c',
+    liveLink: 'https://yourdomain.com/project-c'
   }
 ];
 
@@ -41,7 +46,16 @@ const ProjectsSection: React.FC = () => {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
         {projects.map((project, idx) => (
-          <ProjectCard key={idx} {...project} delay={idx * 0.2} />
+          <motion.div
+            key={idx}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: idx * 0.2, duration: 0.5 }}
+            className="flex justify-center"
+          >
+            <ProjectCardAnimated {...project} />
+          </motion.div>
         ))}
       </div>
     </motion.section>

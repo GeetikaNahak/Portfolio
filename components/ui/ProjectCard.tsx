@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import ProjectCardAnimated from './project-card-animated';
 
 export type ProjectCardProps = {
   title: string;
@@ -33,6 +34,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, link, del
         View Project →
       </a>
     )}
+
+    <ProjectCardAnimated title='Hello' githubLink='Github' liveLink='Live' image=''/>
   </motion.div>
 );
 

@@ -95,7 +95,7 @@ const Hero = () => {
             <MagicButton title="Download Resume" icon="📄" position="right" />
           </a>
         </div>
-      </div><ProjectsSection/>
+      </div>
     </div>
   );
 };
