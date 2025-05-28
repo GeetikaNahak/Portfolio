@@ -62,9 +62,9 @@ const Hero = () => {
       <div className="flex flex-col items-center justify-center relative my-20 z-10 px-4 text-center">
         <TextGenerateEffect
           className="text-[48px] md:text-7xl lg:text-8xl font-bold tracking-wider leading-tight"
-          words="Hi, I'm Mark"
+          words="Hi, I'm Geetika"
         />
-        <p className="text-white md:tracking-wider mb-4 text-sm md:text-xl lg:text-2xl">
+        <p className="text-white md:tracking-wider mb-4 text-xl md:text-xl lg:text-2xl">
   A Full Stack Web Developer, building{" "}
   <AnimatePresence mode="wait">
     <motion.span
@@ -79,20 +79,20 @@ const Hero = () => {
       {currentText.word}
     </motion.span>
   </AnimatePresence>{" "}
-  webApps
+  webApps and Competitive Programmer
 </p>
 
 
         <div className="flex gap-4 flex-wrap justify-center">
           <a href="#about">
-            <MagicButton title="Show my work" icon="➡️" position="right" />
+            <MagicButton title="View my Work" icon position="right" />
           </a>
           <a
             href="https://drive.google.com/your-resume-link"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <MagicButton title="Download Resume" icon="📄" position="right" />
+            <MagicButton title="Get in touch" icon position="right" />
           </a>
         </div>
       </div>
