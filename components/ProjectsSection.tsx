@@ -2,24 +2,48 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import ProjectCardAnimated from './ui/project-card-animated';
+import ProjectCard from './ui/Project-card-new';
 
 const projects = [
   {
     title: 'Project A',
-    image: 'https://via.placeholder.com/300x300',
+    image: '/unnamed.png',
     githubLink: 'https://github.com/user/project-a',
     liveLink: 'https://yourdomain.com/project-a'
   },
   {
     title: 'Project B',
-    image: 'https://via.placeholder.com/300x300',
+    image: '/amazon.jpg',
     githubLink: 'https://github.com/user/project-b',
     liveLink: 'https://yourdomain.com/project-b'
   },
   {
     title: 'Project C',
-    image: 'https://via.placeholder.com/300x300',
+    image: '/chatter.jpg',
+    githubLink: 'https://github.com/user/project-c',
+    liveLink: 'https://yourdomain.com/project-c'
+  },
+  {
+    title: 'Project B',
+    image: '/amazon.jpg',
+    githubLink: 'https://github.com/user/project-b',
+    liveLink: 'https://yourdomain.com/project-b'
+  },
+  {
+    title: 'Project C',
+    image: '/chatter.jpg',
+    githubLink: 'https://github.com/user/project-c',
+    liveLink: 'https://yourdomain.com/project-c'
+  },
+  {
+    title: 'Project B',
+    image: '/amazon.jpg',
+    githubLink: 'https://github.com/user/project-b',
+    liveLink: 'https://yourdomain.com/project-b'
+  },
+  {
+    title: 'Project C',
+    image: '/chatter.jpg',
     githubLink: 'https://github.com/user/project-c',
     liveLink: 'https://yourdomain.com/project-c'
   }
@@ -27,15 +51,11 @@ const projects = [
 
 const ProjectsSection: React.FC = () => {
   return (
-    <motion.section
-      className="w-full px-4 py-16 bg-black"
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: true, amount: 0.3 }}
-      transition={{ duration: 0.8 }}
+    <div
+      className="w-full px-4 py-16 bg-gradient-to-b from-slate-950 to-black"
       id="projects"
     >
-      <div className="max-w-6xl mx-auto text-center mb-12">
+      <div className="max-w-6xl mx-auto text-center mb-12 ">
         <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
           My Projects
         </h2>
@@ -50,15 +70,15 @@ const ProjectsSection: React.FC = () => {
             key={idx}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: idx * 0.2, duration: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ delay: idx * 0.2, duration: 0.6, ease: 'easeOut' }}
             className="flex justify-center"
           >
-            <ProjectCardAnimated {...project} />
+            <ProjectCard {...project} />
           </motion.div>
         ))}
       </div>
-    </motion.section>
+    </div>
   );
 };
 
