@@ -22,13 +22,10 @@ const skills = [
 
 export default function SkillsSection() {
   return (
-    <motion.section
-      className="w-full py-16 px-4 bg-black text-white"
+    <div
+      className="w-full py-16 px-4 bg-gradient-to-b from-slate-900 to-black text-white"
       id="skills"
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.8 }}
+      
     >
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-4xl font-bold mb-10">Skills</h2>
@@ -45,6 +42,6 @@ export default function SkillsSection() {
           ))}
         </div>
       </div>
-    </motion.section>
+    </div>
   );
 }
