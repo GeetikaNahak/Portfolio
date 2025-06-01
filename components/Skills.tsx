@@ -23,7 +23,7 @@ const skills = [
 export default function SkillsSection() {
   return (
     <div
-      className="w-full py-16 px-4 bg-gradient-to-b from-slate-900 to-black text-white"
+      className="w-full py-16 px-4 bg-gradient-to-b from-slate-950 to-black text-white"
       id="skills"
       
     >

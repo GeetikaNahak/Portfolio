@@ -5,8 +5,6 @@ import ProjectsSection from "@/components/ProjectsSection";
 import SkillsSection from "@/components/Skills";
 import { FloatingNav } from "@/components/ui/floating-navbar";
 
-import Image from "next/image";
-import { FaHome } from "react-icons/fa";
 
 export default function Home() {
   return (
