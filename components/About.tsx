@@ -29,15 +29,15 @@ const AboutMe: React.FC = () => {
   const education = [
     {
       degree: "B.Tech in Computer Science",
-      institution: "Your College Name",
-      duration: "2021 - 2025",
-      achievement: "Branch Topper (Year X)",
+      institution: "Vignan's Institute of Information Technology",
+      duration: "2022 - 2026",
+      achievement: "CGPA : 9.4",
     },
     {
-      degree: "High School (12th)",
-      institution: "ABC School",
-      duration: "2019 - 2021",
-      achievement: "Scored 95%+",
+      degree: "Intermediate (12th)",
+      institution: "St. Joseph's College For Women(A)",
+      duration: "2020 - 2022",
+      achievement: "Percentage : 86",
     },
   ];
 
@@ -46,10 +46,10 @@ const AboutMe: React.FC = () => {
       id="about"
       className="w-full px-6 py-16 bg-gradient-to-b from-slate-950 to-black text-white"
     >
-      <div className="max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center gap-10">
+      <div className="max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center gap-10 justify-between">
         {/* Left Content */}
         <div className="md:w-1/2 w-full space-y-6 mt-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-indigo-300">
+          <h2 className="text-3xl md:text-4xl font-bold text-white">
             About Me
           </h2>
           <p className="text-gray-300 leading-relaxed">
