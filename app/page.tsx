@@ -1,3 +1,5 @@
+
+import AboutMe from "@/components/About";
 import Achievements from "@/components/Achievements";
 import Extracurriculars from "@/components/Extracurricular";
 import Hero from "@/components/Hero";
@@ -19,6 +21,7 @@ export default function Home() {
         ]}
       />
       <Hero />
+      <AboutMe/>
       <ProjectsSection />
       <SkillsSection/>
       <Extracurriculars/>
