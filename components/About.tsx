@@ -44,23 +44,26 @@ const AboutMe: React.FC = () => {
   return (
     <section
       id="about"
-      className="w-full px-6 py-16 bg-gradient-to-b from-slate-950 to-black text-white"
+      className="w-full min-h-screen px-6 py-16 bg-gradient-to-b from-slate-950 to-black text-white"
     >
-      <div className="max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center gap-10 justify-between">
-        {/* Left Content */}
-        <div className="md:w-1/2 w-full space-y-6 mt-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-white">
-            About Me
-          </h2>
-          <p className="text-gray-300 leading-relaxed">
-            I’m a passionate Full Stack Developer and Competitive Coder who
-            loves building web applications and solving algorithmic challenges.
-            I enjoy working on impactful projects and taking on leadership roles
-            in communities and hackathons.
-          </p>
+      <div className="max-w-6xl mx-auto">
+        {/* Centered About Heading */}
+        <h2 className="text-center text-3xl md:text-4xl font-bold text-white mb-12">
+          About Me
+        </h2>
 
-          {/* Tabs */}
-          <div className="flex gap-4 mt-4">
+        <div className="max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center gap-10 justify-between">
+          {/* Left Content */}
+          <div className="md:w-1/2 w-full space-y-6 mt-4">
+            <p className="text-gray-300 leading-relaxed">
+              I’m a passionate Full Stack Developer and Competitive Coder who
+              loves building web applications and solving algorithmic challenges.
+              I enjoy working on impactful projects and taking on leadership roles
+              in communities and hackathons.
+            </p>
+
+            {/* Tabs */}
+            <div className="flex gap-4 mt-4">
             <button
               onClick={() => setActiveTab("skills")}
               className={`px-4 py-2 text-sm font-medium transition-all ${
@@ -120,19 +123,16 @@ const AboutMe: React.FC = () => {
           </div>
         </div>
 
-        {/* Right Image */}
-        <div className="relative">
-  {/* Soft blue glow behind image */}
-  <div className="absolute -inset-2 bg-slate-900 blur-md opacity-40 rounded-xl z-0"></div>
-
-  {/* Image with strong shadow and hover effect */}
-  <img
-    src="/PortfolioImg.png"
-    alt="Your Profile"
-    className="relative rounded-xl h-[400px] w-auto object-cover shadow-[0_25px_50px_rgba(0,0,0,0.8)] hover:scale-105 transition-transform duration-500 z-10"
-  />
-</div>
-
+          {/* Right Image */}
+          <div className="relative">
+            <div className="absolute -inset-2 bg-slate-900 blur-md opacity-40 rounded-xl z-0"></div>
+            <img
+              src="/PortfolioImg.png"
+              alt="Your Profile"
+              className="relative rounded-xl h-[400px] w-auto object-cover shadow-[0_25px_50px_rgba(0,0,0,0.8)] hover:scale-105 transition-transform duration-500 z-10"
+            />
+          </div>
+        </div>
       </div>
     </section>
   );

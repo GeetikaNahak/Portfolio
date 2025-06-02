@@ -48,7 +48,7 @@ const Hero = () => {
   const currentText = TEXTS[currentIndex];
 
   return (
-    <div className="pb-20 pt-36 w-full h-full bg-black">
+    <div className="pb-20 min-h-screen pt-36 w-full h-full bg-black">
       <div>
         <Spotlight
           className="-top-50 -left-10 md:-left-32 md:-top-20 h-screen"

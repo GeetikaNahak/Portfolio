@@ -20,10 +20,10 @@ const Achievements = () => {
   return (
     <section
       id="achievements"
-      className="bg-gradient-to-b from-slate-950 to-black text-white py-16 px-4"
+      className="bg-gradient-to-b min-h-screen from-slate-950 to-black text-white py-16 px-4"
     >
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-6">🏆 Achievements</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-6">Achievements</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-10">
           {achievements.map((item, index) => (
             <motion.div
