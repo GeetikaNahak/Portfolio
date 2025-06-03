@@ -32,11 +32,11 @@ const extracurriculars = [
 ];
 
 const TimelineDot = () => (
-  <div className="w-5 h-5 bg-indigo-500 rounded-full border-2 border-white shadow-md"></div>
+  <div className="w-5 h-5 bg-blue-500 rounded-full border-2 border-white shadow-md"></div>
 );
 
 const TimelineLine = () => (
-  <div className="w-1 bg-indigo-600 flex-grow mx-auto"></div>
+  <div className="w-1 bg-blue-600 flex-grow mx-auto"></div>
 );
 
 const ExtracurricularsTimeline: React.FC = () => {
@@ -75,10 +75,10 @@ const ExtracurricularsTimeline: React.FC = () => {
                 key={idx}
                 className="bg-slate-800 rounded-xl shadow-lg p-6"
               >
-                <h3 className="text-xl font-semibold text-indigo-300 mb-1">{role}</h3>
+                <h3 className="text-xl font-semibold text-blue-300 mb-1">{role}</h3>
                 <p className="text-pink-300 font-medium">{organization}</p>
                 <p className="text-purple-400 text-sm italic mb-4">{duration}</p>
-                <p className="text-indigo-200 text-sm">{description}</p>
+                <p className="text-blue-200 text-sm">{description}</p>
               </div>
             ))}
           </div>

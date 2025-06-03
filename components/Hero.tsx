@@ -6,7 +6,7 @@ import { BackgroundBeams } from "./ui/background-beams";
 import { TextGenerateEffect } from "./ui/text-generate-effect";
 import MagicButton from "./ui/magic-button";
 import { AnimatePresence, motion } from "framer-motion";
-import ProjectsSection from "./ProjectsSection";
+import { Github, Linkedin } from "lucide-react";
 
 const TEXTS = [
   {
@@ -84,17 +84,29 @@ const Hero = () => {
 
 
         <div className="flex gap-4 flex-wrap justify-center">
-          <a href="#about">
-            <MagicButton title="View my Work" icon position="right" />
-          </a>
-          <a
-            href="https://drive.google.com/your-resume-link"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <MagicButton title="Get in touch" icon position="right" />
-          </a>
-        </div>
+  <a
+    href="https://github.com/your-username" // Replace with your GitHub
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <MagicButton
+      title="View my Work"
+      icon={<Github size={18} />}
+      position="right"
+    />
+  </a>
+  <a
+    href="https://linkedin.com/in/your-profile" // Replace with your LinkedIn
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <MagicButton
+      title="Get in touch"
+      icon={<Linkedin size={18} />}
+      position="right"
+    />
+  </a>
+</div>
       </div>
     </div>
   );
