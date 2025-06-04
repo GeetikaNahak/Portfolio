@@ -3,6 +3,7 @@ import AboutMe from "@/components/About";
 import Achievements from "@/components/Achievements";
 import ContactPage from "@/components/Contact";
 import Extracurriculars from "@/components/Extracurricular";
+import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 // import Projects from "@/components/Projects";
 import ProjectsSection from "@/components/ProjectsSection";
@@ -28,6 +29,7 @@ export default function Home() {
       <Extracurriculars/>
       <Achievements/>
       <ContactPage/>
+      <Footer/>
     </main>
   );
 }
