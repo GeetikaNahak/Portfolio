@@ -12,8 +12,7 @@ Welcome to my personal portfolio website! Built with passion and code, this proj
 - 🎨 Beautiful modern UI (Tailwind CSS + Framer Motion)
 - 💡 Animated text and interactive effects
 - 📱 Fully responsive design
-- 📄 Resume download option
-- 📬 Functional contact form (Google Sheets or FormSubmit)
+- 📬 Functional contact form
 - 🌈 Dark mode support
 
 ---
