@@ -1,141 +1,126 @@
 "use client";
 
-import React, { useState } from "react";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
 import { motion } from "framer-motion";
+import React, { useState } from "react";
+import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 
-const ContactPage: React.FC = () => {
+const Contacts: React.FC = () => {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
-  const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitting(true);
-    // Simulate async submit (replace with real API call)
-    setTimeout(() => {
-      setSubmitting(false);
-      setSubmitted(true);
-      setFormData({ name: "", email: "", message: "" });
-    }, 1500);
+    // Handle form submission (send email, API call, etc.)
+    setSubmitted(true);
+    setFormData({ name: "", email: "", message: "" });
   };
 
   return (
     <section
       id="contact"
-      className="min-h-screen bg-gradient-to-b from-slate-950 to-black flex flex-col justify-center px-6 py-16 text-white max-w-4xl mx-auto"
+      className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-950 to-black px-6 py-20 text-white flex flex-col items-center"
     >
-      <motion.h1
-        className="text-5xl font-extrabold mb-6 text-center tracking-tight"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7 }}
-      >
-        Get in Touch
-      </motion.h1>
+      <motion.h2
+              className="text-4xl md:text-5xl font-bold text-center mb-4 relative  "
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, duration: 0.6 }}
+            >
+              Get In Touch
+              <span className="block h-1 w-20 mx-auto mt-2 bg-gradient-to-r from-indigo-500 to-blue-400 rounded"></span>
+            </motion.h2>
+      <p className="max-w-xl text-center text-gray-300 mb-12">
+        Whether you want to collaborate, have a question, or just say hi, I’d love to hear from you!
+      </p>
 
-      <motion.p
-        className="text-center text-gray-400 mb-12 max-w-xl mx-auto"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.3, duration: 0.7 }}
-      >
-        Whether you have a question, want to collaborate, or just want to say hi, my inbox is always open.
-      </motion.p>
+      <div className="flex flex-col md:flex-row md:space-x-12 w-full max-w-5xl">
+        {/* Contact Info */}
+        <div className="md:w-1/3 bg-slate-900 rounded-xl p-8 shadow-lg flex flex-col space-y-6">
+          <h3 className="text-xl font-semibold mb-4 border-b border-blue-500 pb-2">Contact Info</h3>
+          <div className="flex items-center space-x-4 text-white-200">
+            
+              Happy to connect on -
+           
+          </div>
+          
+          <div className="flex space-x-6 mt-6">
+            <a
+              href="https://linkedin.com/in/your-linkedin"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              className="text-white-200 hover:text-white transition"
+            >
+              <FaLinkedin size={32} />
+            </a>
+            <a
+              href="https://github.com/your-github"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+              className="text-white-100 hover:text-white transition"
+            >
+              <FaGithub size={32} />
+            </a>
+          </div>
+        </div>
 
-      <motion.form
-        onSubmit={handleSubmit}
-        className="bg-slate-900 rounded-lg shadow-lg p-8 flex flex-col gap-6"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.5, duration: 0.7 }}
-      >
-        <div className="flex flex-col md:flex-row gap-6">
-          <label className="flex flex-col flex-1">
-            <span className="mb-2 font-semibold">Name</span>
+        {/* Contact Form */}
+        <form
+          onSubmit={handleSubmit}
+          className="md:w-2/3 mt-10 md:mt-0 bg-slate-900 rounded-xl p-8 shadow-lg"
+        >
+          <h3 className="text-xl font-semibold mb-6 border-b border-blue-500 pb-2">Send Me a Message</h3>
+
+          {submitted && (
+            <p className="mb-4 text-green-400 font-semibold">
+              Thanks for reaching out! I’ll get back to you soon.
+            </p>
+          )}
+
+          <div className="flex flex-col space-y-5">
             <input
               type="text"
               name="name"
               value={formData.name}
               onChange={handleChange}
+              placeholder="Your Name"
               required
-              placeholder="Your name"
-              className="bg-transparent border border-gray-600 rounded-md px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition"
+              className="rounded-md px-4 py-3 bg-slate-800 border border-transparent focus:outline-none focus:border-blue-400 transition"
             />
-          </label>
-
-          <label className="flex flex-col flex-1">
-            <span className="mb-2 font-semibold">Email</span>
             <input
               type="email"
               name="email"
               value={formData.email}
               onChange={handleChange}
+              placeholder="Your Email"
               required
-              placeholder="you@example.com"
-              className="bg-transparent border border-gray-600 rounded-md px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition"
+              className="rounded-md px-4 py-3 bg-slate-800 border border-transparent focus:outline-none focus:border-blue-400 transition"
             />
-          </label>
-        </div>
-
-        <label className="flex flex-col">
-          <span className="mb-2 font-semibold">Message</span>
-          <textarea
-            name="message"
-            rows={5}
-            value={formData.message}
-            onChange={handleChange}
-            required
-            placeholder="Write your message here..."
-            className="bg-transparent border border-gray-600 rounded-md px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition resize-none"
-          />
-        </label>
-
-        <button
-          type="submit"
-          disabled={submitting}
-          className="self-end inline-flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 disabled:bg-indigo-400 text-white font-semibold px-6 py-3 rounded-md shadow-md transition"
-        >
-          {submitting ? "Sending..." : "Send Message"}
-          <Send size={18} />
-        </button>
-
-        {submitted && (
-          <p className="mt-4 text-green-400 font-medium">
-            Thanks for reaching out! I'll get back to you soon.
-          </p>
-        )}
-      </motion.form>
-
-      <motion.div
-        className="mt-14 flex flex-col md:flex-row justify-center items-center gap-12 text-gray-400 text-sm"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.8, duration: 0.7 }}
-      >
-        <div className="flex items-center gap-3">
-          <Mail className="text-indigo-500" />
-          <a href="mailto:your.email@example.com" className="hover:text-indigo-400 transition">
-            your.email@example.com
-          </a>
-        </div>
-        <div className="flex items-center gap-3">
-          <Phone className="text-indigo-500" />
-          <a href="tel:+1234567890" className="hover:text-indigo-400 transition">
-            +1 234 567 890
-          </a>
-        </div>
-        <div className="flex items-center gap-3">
-          <MapPin className="text-indigo-500" />
-          <span>Your City, Country</span>
-        </div>
-      </motion.div>
+            <textarea
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              placeholder="Your Message"
+              required
+              rows={5}
+              className="rounded-md px-4 py-3 bg-slate-800 border border-transparent focus:outline-none focus:border-blue-400 transition resize-none"
+            />
+            <button
+              type="submit"
+              className="bg-blue-600 hover:bg-blue-700 transition rounded-md py-3 font-semibold text-white shadow-md"
+            >
+              Send Message
+            </button>
+          </div>
+        </form>
+      </div>
     </section>
   );
 };
 
-export default ContactPage;
+export default Contacts;

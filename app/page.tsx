@@ -1,6 +1,7 @@
 
 import AboutMe from "@/components/About";
 import Achievements from "@/components/Achievements";
+import ContactPage from "@/components/Contact";
 import Extracurriculars from "@/components/Extracurricular";
 import Hero from "@/components/Hero";
 // import Projects from "@/components/Projects";
@@ -26,7 +27,7 @@ export default function Home() {
       <ProjectsSection />
       <Extracurriculars/>
       <Achievements/>
-      
+      <ContactPage/>
     </main>
   );
 }
