@@ -21,7 +21,15 @@ const Achievements = () => {
     <section
       id="achievements"
       className="bg-gradient-to-b min-h-screen from-slate-950 to-black text-white py-16 px-4"
-    ><h2 className="text-4xl text-center font-bold mb-10">Achievements</h2>
+    ><motion.h2
+              className="text-4xl md:text-5xl font-bold text-center mb-4 relative  "
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, duration: 0.6 }}
+            >
+              Achievements
+              <span className="block h-1 w-20 mx-auto mt-2 bg-gradient-to-r from-indigo-500 to-blue-400 rounded"></span>
+            </motion.h2>
       <div
     className="rounded-2xl p-6 bg-cover bg-center bg-no-repeat"
     style={{

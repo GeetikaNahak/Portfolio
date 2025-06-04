@@ -6,24 +6,28 @@ import { BackgroundBeams } from "./ui/background-beams";
 import { TextGenerateEffect } from "./ui/text-generate-effect";
 import MagicButton from "./ui/magic-button";
 import { AnimatePresence, motion } from "framer-motion";
-import { Github, Linkedin } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 
 const TEXTS = [
   {
     word: "amazing",
-    className: "bg-clip-text text-transparent bg-gradient-to-r from-[#ff1835] to-[#ffc900]",
+    className:
+      "bg-clip-text text-transparent bg-gradient-to-r from-[#ff1835] to-[#ffc900]",
   },
   {
     word: "stunning",
-    className: "bg-clip-text text-transparent bg-gradient-to-r from-[#0077ff] to-[#00e7df]",
+    className:
+      "bg-clip-text text-transparent bg-gradient-to-r from-[#0077ff] to-[#00e7df]",
   },
   {
     word: "fantastic",
-    className: "bg-clip-text text-transparent bg-gradient-to-r from-[#7f00de] to-[#ff007f]",
+    className:
+      "bg-clip-text text-transparent bg-gradient-to-r from-[#7f00de] to-[#ff007f]",
   },
   {
     word: "attractive",
-    className: "bg-clip-text text-transparent bg-gradient-to-r from-[#2ecc70] to-[#1ca085]",
+    className:
+      "bg-clip-text text-transparent bg-gradient-to-r from-[#2ecc70] to-[#1ca085]",
   },
 ];
 
@@ -65,49 +69,53 @@ const Hero = () => {
           words="Hi, I'm Geetika"
         />
         <p className="text-white md:tracking-wider mb-4 text-xl md:text-xl lg:text-2xl">
-  A Full Stack Web Developer, building{" "}
-  <AnimatePresence mode="wait">
-    <motion.span
-      key={currentIndex}
-      variants={variants}
-      initial="enter"
-      animate="center"
-      exit="exit"
-      transition={{ duration: 0.5 }}
-      className={`inline-block font-semibold ${currentText.className}`}
-    >
-      {currentText.word}
-    </motion.span>
-  </AnimatePresence>{" "}
-  webApps and Competitive Programmer
-</p>
-
+          A Full Stack Web Developer, building{" "}
+          <AnimatePresence mode="wait">
+            <motion.span
+              key={currentIndex}
+              variants={variants}
+              initial="enter"
+              animate="center"
+              exit="exit"
+              transition={{ duration: 0.5 }}
+              className={`inline-block font-semibold ${currentText.className}`}
+            >
+              {currentText.word}
+            </motion.span>
+          </AnimatePresence>{" "}
+          webApps and Competitive Programmer
+        </p>
 
         <div className="flex gap-4 flex-wrap justify-center">
-  <a
-    href="https://github.com/your-username" // Replace with your GitHub
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <MagicButton
-      title="View my Work"
-      icon={<Github size={18} />}
-      position="right"
-    />
-  </a>
-  <a
-    href="https://linkedin.com/in/your-profile" // Replace with your LinkedIn
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <MagicButton
-      title="Get in touch"
-      icon={<Linkedin size={18} />}
-      position="right"
-    />
-  </a>
-</div>
+          <a
+            href="https://github.com/your-username" // Replace with your GitHub
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <MagicButton title="View my Work" icon="" position="right" />
+          </a>
+          <a
+            href="https://linkedin.com/in/your-profile" // Replace with your LinkedIn
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <MagicButton title="Get in touch" icon="" position="right" />
+          </a>
+        </div>
       </div>
+      <motion.a
+        href="#about" // or whatever your next section ID is
+        className="absolute bottom-10 left-1/2 transform -translate-x-1/2 cursor-pointer"
+        initial={{ y: 0 }}
+        animate={{ y: [0, 10, 0] }}
+        transition={{
+          duration: 1.5,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+      >
+        <ChevronDown className="w-8 h-8 text-white opacity-70 hover:opacity-100 transition" />
+      </motion.a>
     </div>
   );
 };

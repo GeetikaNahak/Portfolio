@@ -3,6 +3,7 @@ import AboutMe from "@/components/About";
 import Achievements from "@/components/Achievements";
 import Extracurriculars from "@/components/Extracurricular";
 import Hero from "@/components/Hero";
+// import Projects from "@/components/Projects";
 import ProjectsSection from "@/components/ProjectsSection";
 import SkillsSection from "@/components/Skills";
 import { FloatingNav } from "@/components/ui/floating-navbar";
@@ -23,7 +24,6 @@ export default function Home() {
       <Hero />
       <AboutMe/>
       <ProjectsSection />
-      <SkillsSection/>
       <Extracurriculars/>
       <Achievements/>
       

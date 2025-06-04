@@ -1,5 +1,7 @@
-import React from "react";
+'use client'
 
+import React from "react";
+import { motion } from 'framer-motion';
 const extracurriculars = [
   {
     role: "GSSoC Campus Ambassador",
@@ -46,9 +48,15 @@ const ExtracurricularsTimeline: React.FC = () => {
       className="w-full px-4 py-16 bg-gradient-to-b from-slate-950 to-black"
     >
       <div className="max-w-6xl mx-auto text-center mb-12">
-        <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-          Extracurricular Activities
-        </h2>
+        <motion.h2
+          className="text-4xl md:text-5xl font-bold text-center mb-4 relative inline-block"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2, duration: 0.6 }}
+        >
+          Extracurriculars
+          <span className="block h-1 w-20 mx-auto mt-2 bg-gradient-to-r from-indigo-500 to-blue-400 rounded"></span>
+        </motion.h2>
         <p className="text-gray-400 text-sm md:text-base max-w-2xl mx-auto mb-12">
           Here’s a timeline of some leadership roles and activities I've been
           proud to take part in outside academics.

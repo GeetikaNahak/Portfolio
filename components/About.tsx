@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useRef, useEffect } from "react";
-
+import { motion } from "framer-motion";
 const AboutMe: React.FC = () => {
   const [activeTab, setActiveTab] = useState<"skills" | "education">("skills");
   const skillsRef = useRef<HTMLDivElement>(null);
@@ -48,9 +48,15 @@ const AboutMe: React.FC = () => {
     >
       <div className="max-w-6xl mx-auto">
         {/* Centered About Heading */}
-        <h2 className="text-center text-3xl md:text-4xl font-bold text-white mb-12">
+        <motion.h2
+          className="text-4xl md:text-5xl font-bold text-center mb-4 relative inline-block"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2, duration: 0.6 }}
+        >
           About Me
-        </h2>
+          <span className="block h-1 w-20 mx-auto mt-2 bg-gradient-to-r from-indigo-500 to-blue-400 rounded"></span>
+        </motion.h2>
 
         <div className="max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center gap-10 justify-between">
           {/* Left Content */}
