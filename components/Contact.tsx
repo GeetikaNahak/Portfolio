@@ -58,7 +58,7 @@ const Contacts: React.FC = () => {
               <FaLinkedin size={32} />
             </a>
             <a
-              href="https://github.com/your-github"
+              href="https://github.com/geetikanahak"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"

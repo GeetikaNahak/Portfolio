@@ -88,18 +88,18 @@ const Hero = () => {
 
         <div className="flex gap-4 flex-wrap justify-center">
           <a
-            href="https://github.com/your-username" // Replace with your GitHub
+            href="https://github.com/geetikanahak" // Replace with your GitHub
             target="_blank"
             rel="noopener noreferrer"
           >
             <MagicButton title="View my Work" icon="" position="right" />
           </a>
           <a
-            href="https://linkedin.com/in/your-profile" // Replace with your LinkedIn
-            target="_blank"
+            href="#contact" // Replace with your LinkedIn
+            target=""
             rel="noopener noreferrer"
           >
-            <MagicButton title="Get in touch" icon="" position="right" />
+            <MagicButton  title="Get in touch" icon="" position="right" />
           </a>
         </div>
       </div>

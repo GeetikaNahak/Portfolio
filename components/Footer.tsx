@@ -24,7 +24,7 @@ const Footer: React.FC = () => {
         {/* Right: Icons and Back to Top */}
         <div className="flex items-center gap-6 text-xl">
           <a
-            href="https://github.com/yourgithub"
+            href="https://github.com/geetikanahak"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
