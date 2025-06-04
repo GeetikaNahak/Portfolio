@@ -14,7 +14,6 @@ const Contacts: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission (send email, API call, etc.)
     setSubmitted(true);
     setFormData({ name: "", email: "", message: "" });
   };
@@ -69,7 +68,6 @@ const Contacts: React.FC = () => {
           </div>
         </div>
 
-        {/* Contact Form */}
         <form
           onSubmit={handleSubmit}
           className="md:w-2/3 mt-10 md:mt-0 bg-slate-900 rounded-xl p-8 shadow-lg"

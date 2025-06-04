@@ -13,21 +13,21 @@ const extracurriculars = [
   {
     role: "CodeChef DSA Lead",
     organization: "CodeChef Chapter",
-    duration: "2022 - Present",
+    duration: "2024 - Present",
     description:
       "Guiding DSA learning sessions and organizing CodeChef contests for the campus.",
   },
   {
     role: "Sushacks Hackathon Organizer",
     organization: "Sushacks",
-    duration: "2023",
+    duration: "2025",
     description:
       "Coordinated and managed the hackathon event, fostering innovation and teamwork.",
   },
   {
     role: "GFG CP Head",
     organization: "GeeksforGeeks",
-    duration: "2023 - Present",
+    duration: "2024 - Present",
     description:
       "Leading the Competitive Programming community, organizing contests and workshops.",
   },
@@ -81,12 +81,12 @@ const ExtracurricularsTimeline: React.FC = () => {
             {extracurriculars.map(({ role, organization, duration, description }, idx) => (
               <div
                 key={idx}
-                className="bg-slate-800 rounded-xl shadow-lg p-6"
+                className="bg-slate-900 rounded-xl shadow-lg p-6"
               >
-                <h3 className="text-xl font-semibold text-blue-300 mb-1">{role}</h3>
+                <h3 className="text-xl font-semibold text-white-200 mb-1">{role}</h3>
                 <p className="text-pink-300 font-medium">{organization}</p>
-                <p className="text-purple-400 text-sm italic mb-4">{duration}</p>
-                <p className="text-blue-200 text-sm">{description}</p>
+                <p className="text-white-200 text-sm italic mb-4">{duration}</p>
+                <p className="text-gray-300 text-sm">{description}</p>
               </div>
             ))}
           </div>

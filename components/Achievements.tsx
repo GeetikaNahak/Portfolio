@@ -1,4 +1,4 @@
-// components/Achievements.tsx
+
 "use client";
 
 import React from "react";
@@ -6,14 +6,28 @@ import { motion } from 'framer-motion';
 const achievements = [
   {
     title: "TCS CodeVita Qualifier",
-    image: "/cert.png",
-    description: "Qualified Round 2 in TCS CodeVita Global Coding Contest 2024",
+    year: "2025",
+    desc: "Qualified Round 2 in TCS CodeVita Global Coding Contest 2024",
   },
   {
     title: "CodeRush 1st Prize Winner",
-    image: "/winning.jpg",
-    description: "Won 1st prize in college-wide coding competition CodeRush",
+    year: "2024",
+    desc: "Won 1st prize in college-wide coding competition CodeRush",
   },
+  {
+    title: "3* Coder On CodeChef",
+    year:"",
+    desc:"Achieved 3* Rating on Code Chef Coding Platform"
+  },
+  {
+    title: "500+ Problems Solved",
+    year:"",
+    desc:"Solved 500+ problems on CodeChef, Leetcode and GeeksforGeeks"
+  },
+  {
+    title: "Top Performer in College Level Coding Contests",
+    desc:"Always Stayed in Top 10 in the Contests held in the College",
+  }
 ];
 
 const Achievements = () => {
@@ -40,33 +54,16 @@ const Achievements = () => {
       
       <div className="md:w-1/3 w-full bg-slate-900  text-white p-6 rounded-2xl shadow-lg">
 
-        {/* Achievement 1 */}
-        <div className="mb-6">
-          <p className="text-sm text-gray-400">2024</p>
-          <h5 className="text-lg font-semibold text-white">Code Rush Winner</h5>
-          <p className="text-sm text-gray-400">Organized by Coding Club @VIIT</p>
-        </div>
-
-        {/* Achievement 2 */}
-        <div className="mb-6">
-          <p className="text-sm text-gray-400">2024</p>
-          <h5 className="text-lg font-semibold text-white">Finalist – Sushacks Hackathon</h5>
-          <p className="text-sm text-gray-400">Conducted @Sushacks</p>
-        </div>
-
-        {/* Achievement 3 */}
-        <div className="mb-6">
-          <p className="text-sm text-gray-400">2023</p>
-          <h5 className="text-lg font-semibold text-white">App Design Winner</h5>
-          <p className="text-sm text-gray-400">VISTA Technical Fest @VIIT</p>
-        </div>
-
-        {/* Achievement 4 */}
-        <div className="mb-2">
-          <p className="text-sm text-gray-400">2023</p>
-          <h5 className="text-lg font-semibold text-white">Coding Contest Winner</h5>
-          <p className="text-sm text-gray-400">VISTA Technical Fest @VIIT</p>
-        </div>
+        {
+          achievements.map(({year,title,desc})=>(
+            <div className="mb-6">
+              <p className="text-sm text-gray-400">{year}</p>
+              <h5 className="text-lg font-semibold text-white">{title}</h5>
+              <p className="text-sm text-gray-400">{desc}</p>
+            </div>
+          ))
+        }
+        
       </div>
     </div>
   </div>
