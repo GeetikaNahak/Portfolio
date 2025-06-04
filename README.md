@@ -1,4 +1,4 @@
-# 💼 Geetika's Personal Portfolio
+# 💼 My Personal Portfolio
 
 Welcome to my personal portfolio website! Built with passion and code, this project showcases my work, skills, and personality as a developer and creative thinker.
 
