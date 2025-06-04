@@ -2,6 +2,7 @@
 
 import React, { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 const AboutMe: React.FC = () => {
   const [activeTab, setActiveTab] = useState<"skills" | "education">("skills");
   const skillsRef = useRef<HTMLDivElement>(null);
@@ -132,9 +133,11 @@ const AboutMe: React.FC = () => {
           {/* Right Image */}
           <div className="relative">
             <div className="absolute -inset-2 bg-slate-900 blur-md opacity-40 rounded-xl z-0"></div>
-            <img
+            <Image
               src="/PortfolioImg.png"
               alt="Your Profile"
+              width={400}
+              height={400}
               className="relative rounded-xl h-[400px] w-auto object-cover shadow-[0_25px_50px_rgba(0,0,0,0.8)] hover:scale-105 transition-transform duration-500 z-10"
             />
           </div>

@@ -7,7 +7,6 @@ import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 // import Projects from "@/components/Projects";
 import ProjectsSection from "@/components/ProjectsSection";
-import SkillsSection from "@/components/Skills";
 import { FloatingNav } from "@/components/ui/floating-navbar";
 
 

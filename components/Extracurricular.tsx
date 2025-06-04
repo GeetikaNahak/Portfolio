@@ -58,7 +58,7 @@ const ExtracurricularsTimeline: React.FC = () => {
           <span className="block h-1 w-20 mx-auto mt-2 bg-gradient-to-r from-indigo-500 to-blue-400 rounded"></span>
         </motion.h2>
         <p className="text-gray-400 text-sm md:text-base max-w-2xl mx-auto mb-12">
-          Here’s a timeline of some leadership roles and activities I've been
+          Here&apos;s a timeline of some leadership roles and activities I&apos;ve been
           proud to take part in outside academics.
         </p>
       </div>

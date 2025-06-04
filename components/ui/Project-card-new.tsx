@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
@@ -21,9 +22,11 @@ const ProjectCard = ({
     <div className="relative group bg-slate-900 border border-slate-700 rounded-xl shadow-md overflow-hidden max-w-sm w-full transition-transform duration-300 hover:scale-[1.02]">
    
       <div className="relative overflow-hidden" style={{ aspectRatio: "16/9" }}>
-        <img
+        <Image
           src={image}
           alt={title}
+          width={500}
+          height={300}
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
         />
         <div className="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center p-4">

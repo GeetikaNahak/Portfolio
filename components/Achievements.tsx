@@ -55,8 +55,8 @@ const Achievements = () => {
       <div className="md:w-1/3 w-full bg-slate-900  text-white p-6 rounded-2xl shadow-lg">
 
         {
-          achievements.map(({year,title,desc})=>(
-            <div className="mb-6">
+          achievements.map(({year,title,desc},idx)=>(
+            <div key={idx} className="mb-6">
               <p className="text-sm text-gray-400">{year}</p>
               <h5 className="text-lg font-semibold text-white">{title}</h5>
               <p className="text-sm text-gray-400">{desc}</p>
